@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<title>访问本地文件夹示例</title>
+		<script type="text/javascript">
+			function listFiles(selectedFolder) {
+				var output = document.getElementById('output');
+				output.innerHTML = '读取文件列表中...';
+
+				var fs = new FileSystem();
+				fs.listFiles(selectedFolder, function (files) {
+					var fileList = '';
+					for (var i = 0; i < files.length; i++) {
+						fileList += '<li>' + files[i].webkitRelativePath + '</li>';
+					}
+					output.innerHTML = '<ul>' + fileList + '</ul>';
+				});
+			}
+
+			function FileSystem() {
+				this.listFiles = function (directory, callback) {
+					var reader = new DirectoryReader();
+
+					reader.read(directory, function (entries) {
+						var files = [];
+						for (var i = 0; i < entries.length; i++) {
+							var entry = entries[i];
+							if (entry.isFile) {
+								files.push(entry.file());
+							}
+						}
+						callback(files);
+					});
+				};
+			}
+
+			function DirectoryReader() {
+				this.read = function (directory, callback) {
+					var reader = new FileReader();
+					reader.onloadend = function (e) {
+						var files = e.target.result;
+						callback(files);
+					};
+					reader.readAsEntryList(directory.files);
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<input
+			type="file"
+			webkitdirectory
+			directory
+			multiple
+			onchange="listFiles(this);"
+		/>
+		<div id="output"></div>
+	</body>
+</html>

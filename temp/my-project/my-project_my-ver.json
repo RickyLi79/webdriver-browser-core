@@ -1,0 +1,66 @@
+{
+  "projectInfo": {
+    "uid": "39e107cc-8b0c-47e3-9ee3-21a6daf0f3b0",
+    "description": "my-project",
+    "isDev": true,
+    "defaultVersion": "main",
+    "name": "my-project"
+  },
+  "versionInfo": {
+    "description": "",
+    "versionFallbacks": [
+      "other-ver",
+      "final-ver",
+      "main"
+    ],
+    "name": "my-ver"
+  },
+  "resources": [
+    {
+      "fullId": "test-fn/sum",
+      "meta": {
+        "uid": "1592f128-1b24-4a41-a72a-19a9f0dca3b2",
+        "description": "",
+        "name": "sum",
+        "version": "my-ver",
+        "fullId": "test-fn/sum",
+        "project": "39e107cc-8b0c-47e3-9ee3-21a6daf0f3b0",
+        "hash": "f888d363cc841350bb407a05dc2e6900",
+        "category": "test-fn",
+        "contentType": "js"
+      },
+      "content": "function fn(...numbers) {\n  return numbers.reduce((total, i) => total + i, 0);\n}\nreturn {default:fn};"
+    },
+    {
+      "fullId": "default/test-res",
+      "meta": {
+        "uid": "2ebe2115-b89e-4172-91d7-affa376b41f0",
+        "description": "",
+        "name": "test-res",
+        "version": "my-ver",
+        "fullId": "default/test-res",
+        "project": "39e107cc-8b0c-47e3-9ee3-21a6daf0f3b0",
+        "hash": "17523a7762465beeadd20e418d7bd47e",
+        "category": "default",
+        "contentType": "json"
+      },
+      "content": "{\"a\":1,\"b\":2,\"c\":{\"d\":666}}"
+    },
+    {
+      "fullId": "default/test-json",
+      "meta": {
+        "uid": "54e14867-71ae-41bb-ba1f-a9dcd09bd1ca",
+        "description": "nice",
+        "contentFile": "my-data.json",
+        "name": "test-json",
+        "version": "my-ver",
+        "fullId": "default/test-json",
+        "project": "39e107cc-8b0c-47e3-9ee3-21a6daf0f3b0",
+        "hash": "ecf6002e3f66e8853e95937d4253eb05",
+        "category": "default",
+        "contentType": "text"
+      },
+      "content": "{\n\t\"singleQuote\": true,\n\t\"bracketSpacing\": true,\n\t\"endOfLine\": \"lf\",\n\t\"semi\": 123,\n\t\"useTabs\": true,\n\t\"printWidth\": 80,\n\t\"tabWidth\": xxxx,\n\t\"trailingComma\": \"all\",\n\t\"quoteProps\": \"as-needed\",\n\t\"arrowParens\": \"avoid\"\n}\n"
+    }
+  ]
+}

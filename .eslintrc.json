@@ -1,0 +1,33 @@
+{
+	"root": true,
+	"extends": ["prettier"],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"project": ["./tsconfig.json"]
+	},
+	"plugins": ["prettier"],
+	"env": {
+		"commonjs": false,
+		"node": false,
+		"browser": true,
+		"es6": true,
+		"mocha": false,
+		"jquery": false,
+		"worker": false,
+		"es2021": true
+	},
+	"rules": {
+		// "prettier/prettier": "error",
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/ban-ts-comment": "off",
+		"no-trailing-spaces": "off",
+		"no-debugger": "off",
+		"no-lone-blocks": "off",
+		"no-constant-condition": "off",
+		"no-eval": "off",
+		"jsdoc/require-returns-type": "off",
+		"no-bitwise": "off",
+		"no-empty-function": "off",
+		"no-empty": "off"
+	}
+}

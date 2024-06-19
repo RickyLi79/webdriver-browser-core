@@ -1,0 +1,35 @@
+{
+  "projectInfo": {
+    "uid": "39e107cc-8b0c-47e3-9ee3-21a6daf0f3b0",
+    "description": "my-project",
+    "isDev": true,
+    "defaultVersion": "main",
+    "name": "my-project"
+  },
+  "versionInfo": {
+    "description": "",
+    "versionFallbacks": [
+      "other-ver",
+      "final-ver",
+      "main"
+    ],
+    "name": "main"
+  },
+  "resources": [
+    {
+      "fullId": "test-fn/sum",
+      "meta": {
+        "uid": "6ffd01b4-e79a-40cc-a69f-0e0d69d7b913",
+        "description": "",
+        "name": "sum",
+        "version": "main",
+        "fullId": "test-fn/sum",
+        "project": "39e107cc-8b0c-47e3-9ee3-21a6daf0f3b0",
+        "hash": "6c5e6d54b0680ef9e75f7137f4dd4f49",
+        "category": "test-fn",
+        "contentType": "js"
+      },
+      "content": "function fn(obj) {\n  return obj;\n}\nreturn {default:fn};"
+    }
+  ]
+}

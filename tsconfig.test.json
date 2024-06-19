@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"importHelpers": false,
+
+		"esModuleInterop": true,
+		"noEmit": false,
+		// "baseUrl": "./src",
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"resolveJsonModule": true,
+		"strict": true,
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"types": ["./typings", "node"]
+	},
+
+	"watchOptions": {
+		"watchFile": "priorityPollingInterval",
+		"excludeDirectories": ["**/node_modules/"]
+	},
+	"exclude": ["node_modules"],
+	"include": ["src", "test", "typings"],
+	"compileOnSave": false
+}

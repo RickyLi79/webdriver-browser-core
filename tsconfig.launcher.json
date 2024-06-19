@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"importHelpers": false,
+
+		"esModuleInterop": true,
+		"noEmit": true,
+		// "baseUrl": "./src-launcher",
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"resolveJsonModule": true,
+		"strict": true,
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"paths": {
+			"@/*": ["./src-launcher/*"],
+			"#/*": ["./src-types/*"]
+		}
+	},
+
+	"watchOptions": {
+		"watchFile": "priorityPollingInterval",
+		"excludeDirectories": ["**/node_modules/"]
+	},
+	"exclude": ["node_modules"],
+	"include": ["src-launcher", "src-types", "entry/launcher"],
+	"compileOnSave": false
+}
